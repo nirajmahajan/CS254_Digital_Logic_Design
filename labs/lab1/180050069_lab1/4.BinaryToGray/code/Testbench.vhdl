@@ -68,8 +68,8 @@ architecture Behave of Testbench is
 begin
   process 
     variable err_flag : boolean := false;
-    File INFILE: text open read_mode is "C:\Users\niraj\Documents\Niraj\Quartus\Lab1\myBinaryToGrey\TRACEFILE.txt";
-    FILE OUTFILE: text  open write_mode is "C:\Users\niraj\Documents\Niraj\Quartus\Lab1\myBinaryToGrey\OUTPUTFILE.txt";
+    File INFILE: text open read_mode is "C:\Users\niraj\Documents\Niraj\Github\CS254\labs\lab1\180050069_lab1\4.BinaryToGray\code\TRACEFILE.txt";
+    FILE OUTFILE: text  open write_mode is "C:\Users\niraj\Documents\Niraj\Github\CS254\labs\lab1\180050069_lab1\4.BinaryToGray\code\OUTPUTFILE.txt";
 
     -- bit-vectors are read from the file.
     variable input_vector_var: bit_vector (number_of_inputs-1 downto 0);
