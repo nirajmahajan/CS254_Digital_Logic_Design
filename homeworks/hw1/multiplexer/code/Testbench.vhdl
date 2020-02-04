@@ -68,8 +68,8 @@ architecture Behave of Testbench is
 begin
   process 
     variable err_flag : boolean := false;
-    File INFILE: text open read_mode is "C:\Users\niraj\Documents\Niraj\Github\CS254\homeworks\hw1\multiplexer\TRACEFILE.txt";
-    FILE OUTFILE: text  open write_mode is "C:\Users\niraj\Documents\Niraj\Github\CS254\homeworks\hw1\multiplexer\OUTPUTS.txt";
+    File INFILE: text open read_mode is "C:\Users\niraj\Documents\Niraj\Github\CS254\homeworks\hw1\multiplexer\code\TRACEFILE.txt";
+    FILE OUTFILE: text  open write_mode is "C:\Users\niraj\Documents\Niraj\Github\CS254\homeworks\hw1\multiplexer\code\OUTPUTS.txt";
 
     -- bit-vectors are read from the file.
     variable input_vector_var: bit_vector (number_of_inputs-1 downto 0);

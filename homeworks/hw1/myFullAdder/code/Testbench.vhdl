@@ -20,7 +20,7 @@ architecture Behave of Testbench is
   -- Note that you will have to wrap your design into the DUT
   -- as indicated in class.
   component myFullAdder is
-   port (X, Y, Cin: in std_logic; S, C : out std_logic);
+   port (X, Y, Cin: in std_logic; Sout, Cout : out std_logic);
   end component;
 
 
@@ -68,8 +68,8 @@ architecture Behave of Testbench is
 begin
   process 
     variable err_flag : boolean := false;
-    File INFILE: text open read_mode is "C:\Users\niraj\Documents\Niraj\Github\CS254\homeworks\hw1\myFullAdder\TRACEFILE.txt";
-    FILE OUTFILE: text  open write_mode is "C:\Users\niraj\Documents\Niraj\Github\CS254\homeworks\hw1\myFullAdder\OUTPUTS.txt";
+    File INFILE: text open read_mode is "C:\Users\niraj\Documents\Niraj\Github\CS254\homeworks\hw1\myFullAdder\code\TRACEFILE.txt";
+    FILE OUTFILE: text  open write_mode is "C:\Users\niraj\Documents\Niraj\Github\CS254\homeworks\hw1\myFullAdder\code\OUTPUTS.txt";
 
     -- bit-vectors are read from the file.
     variable input_vector_var: bit_vector (number_of_inputs-1 downto 0);
@@ -134,6 +134,6 @@ begin
   end process;
 
   dut_instance: myFullAdder 
-     	port map(Y => input_vector(0), X => input_vector(1), Cin => input_vector(2), C => output_vector(0), S => output_vector(1));
+     	port map(Y => input_vector(0), X => input_vector(1), Cin => input_vector(2), Cout => output_vector(0), Sout => output_vector(1));
 
 end Behave;

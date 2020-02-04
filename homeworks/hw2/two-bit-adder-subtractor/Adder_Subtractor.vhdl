@@ -23,9 +23,10 @@ architecture Struct of Adder_Subtractor is
 signal nB0 : std_logic;
 signal nB1 : std_logic;
 signal connect1 : std_logic;
+signal connect2 : std_logic;
 begin
-	NO0 : NOR_2 port map(A => Control, B => B0, Y => nB0);
+	NO0 : XOR_2 port map(A => Control, B => B0, Y => nB0);
 	FA0 : myFullAdder port map(X => A0, Y => nB0, Cin => Control, S => D0, C => connect1);
-	NO1 : NOR_2 port map(A => Control, B => B1, Y => nB1);
-	FA1 : myFullAdder port map(X => A1, Y => nB1, Cin => Control, S => D1, C => D2);
+	NO1 : XOR_2 port map(A => Control, B => B1, Y => nB1);
+	FA1 : myFullAdder port map(X => A1, Y => nB1, Cin => connect1, S => D1, C => D2);
 end Struct;
