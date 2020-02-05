@@ -20,13 +20,13 @@ end entity Multiplier;
 architecture Struct of Multiplier is
 signal a1b0 : std_logic;
 signal a0b1 : std_logic;
-signal b0b1 : std_logic;
+signal a1b1 : std_logic;
 signal connect1 : std_logic;
 begin
 	Ad1 : AND_2 port map(A => A1, B => B0, Y => a1b0);
-	Ad2 : AND_2 port map(A => A0, B => A1, Y => D0);
+	Ad2 : AND_2 port map(A => A0, B => B0, Y => o0);
 	Ad3 : AND_2 port map(A => A0, B => B1, Y => a0b1);
-	Ad4 : AND_2 port map(A => B0, B => B1, Y => b0b1);
-	HA1 : HALF_ADDER port map(A => a1b0, B => a0b1, S => D1, C => connect1);
-	HA2 : HALF_ADDER port map(A => connect1, B => b0b1, S => D2, C => D3);
+	Ad4 : AND_2 port map(A => A1, B => B1, Y => a1b1);
+	HA1 : HALF_ADDER port map(A => a1b0, B => a0b1, S => o1, C => connect1);
+	HA2 : HALF_ADDER port map(A => connect1, B => a1b1, S => o2, C => o3);
 end Struct;
