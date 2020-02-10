@@ -24,5 +24,5 @@ begin
 	
 	M4 : MUX port map(l => const1, r => const0, c => B1, myout => wire3);
 	M5 : MUX port map(l => const0, r => const1, c => B1, myout => wire4);
-	M6 : MUX port map(l => wire3, r => wire4, c => B0, myout => G0);
+	M6 : MUX port map(l => wire4, r => wire3, c => B0, myout => G0);
 end Struct;

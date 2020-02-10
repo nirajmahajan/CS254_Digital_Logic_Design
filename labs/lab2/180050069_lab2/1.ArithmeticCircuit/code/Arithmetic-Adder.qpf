@@ -19,13 +19,13 @@
 #
 # Quartus Prime
 # Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-# Date created = 23:20:11  February 05, 2020
+# Date created = 20:43:48  February 07, 2020
 #
 # -------------------------------------------------------------------------- #
 
 QUARTUS_VERSION = "16.0"
-DATE = "23:20:11  February 05, 2020"
+DATE = "20:43:48  February 07, 2020"
 
 # Revisions
 
-PROJECT_REVISION = "Arithmetic-Circuit"
+PROJECT_REVISION = "Arithmetic-Adder"
